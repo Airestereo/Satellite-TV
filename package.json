@@ -1,0 +1,61 @@
+{
+  "name": "solid-demo-app",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "pnpm start:lightning",
+    "-------------------------[lightning]-----------------------": "",
+    "start:lightning": "pnpm -F lightning start",
+    "start:lightning-prod": "pnpm -F lightning start:prod",
+    "build:lightning": "pnpm -F lightning build",
+    "build:lightning-github": "pnpm -F lightning build:github",
+    "build:lightning-analyze": "pnpm -F lightning build:analyze",
+    "deploy:lightning": "pnpm -F lightning deploy",
+    "preview:lightning": "pnpm -F lightning preview",
+    "tsc:lightning": "pnpm -F lightning tsc",
+    "-------------------------[web]------------------------------": "",
+    "start:web": "pnpm -F web start",
+    "start:web-prod": "pnpm -F web start:prod",
+    "build:web": "pnpm -F web build",
+    "build:github-web": "pnpm -F web build:github",
+    "build:web-analyze": "pnpm -F web build:analyze",
+    "deploy:web": "pnpm -F web deploy",
+    "preview:web": "vite preview --open --port 8080",
+    "tsc:web": "pnpm -F web tsc",
+    "-------------------------[test]----------------------------": "",
+    "lint:prettier": "prettier --check \"**/*.{ts,js,cjs,md,tsx}\"",
+    "lint:fix:prettier": "prettier --write \"**/*.{ts,js,cjs,md,tsx}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@solid-primitives/scheduled": "^1.4.3",
+    "@solidjs/router": "^0.13.2",
+    "proxy-polyfill": "^0.3.2",
+    "solid-js": "^1.8.17",
+    "vite-plugin-babel": "^1.2.0"
+  },
+  "devDependencies": {
+    "@lightningjs/vite-plugin-import-chunk-url": "^0.3.1",
+    "@vitejs/plugin-legacy": "^5.3.2",
+    "gh-pages": "^6.1.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "terser": "^5.30.4",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vite-bundle-visualizer": "^1.1.0",
+    "vite-plugin-cross-origin-isolation": "^0.1.6",
+    "vite-plugin-solid": "^2.10.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write"
+    ],
+    "*.{js,cjs,md}": "prettier --write"
+  }
+}
