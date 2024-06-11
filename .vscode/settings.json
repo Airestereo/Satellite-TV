@@ -1,0 +1,26 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": [
+    "source.formatDocument",
+    "source.fixAll.eslint"
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+
+
+
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+        "path": "pwsh",
+        "icon": "terminal-powershell"
+    }
+},
+"terminal.integrated.env.windows": {
+    "PATH": "${env:PATH};${workspaceRoot}\\node_modules\\.bin;${env:PNPM_HOME}"
+}
+
+
+
+}
